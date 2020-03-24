@@ -1,12 +1,19 @@
-.login-in-container{
-    width: 100%;
+
+.register-page-container{
+    width: 500px;
+    height: 400px;
+    background-color: #c9431e;
+    border-radius:4px;
+    margin: auto;
+    position: relative;
+    top: 200px;
     text-align: center;
     color: white;
     font-size: 20px;
 }
 .sub-container{
     position: relative;
-    top: 50px;
+    top: 60px;
     margin-bottom: 20px;
 }
 .sub-container>label{
