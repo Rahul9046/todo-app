@@ -4,8 +4,8 @@ const User = require('../models/user');
 
 // get the list of users from the db
 router.get('/user', function (req, res, next){
-    res.send({
-        status: 'GET'
+    User.findOne({ 'details.username': req.query.usr, 'details.password': req.query.pass}).then((user)=>{
+        res.send(user);
     });
 });
 
