@@ -1,12 +1,19 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 // setup express app
 const app = express();
 
+// connect to mongodb
+mongoose.connect('mongodb://localhost/todoapp');
+mongoose.Promise = global.Promise;
+
+app.use(express.static('../public'));
+app.use(bodyParser.json());
 // initialize routes
 app.use('/api', require('./routes/api'));
 
-app.use(express.static('../public'));
 
 // error handling middleware
 app.use(function(err, req, res, next){
