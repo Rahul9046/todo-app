@@ -1,0 +1,27 @@
+.register-container{
+    position: relative;
+    top: 30px;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 40px auto;
+    border: 2px solid white;
+    box-sizing: border-box;
+    background-color: #c9431e;;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+.register-container:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; 
+    height: 100%;
+ }
+.register-container>a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}

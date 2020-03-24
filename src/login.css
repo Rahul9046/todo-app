@@ -1,0 +1,34 @@
+.login-in-container{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.sub-container{
+    position: relative;
+    top: 50px;
+    margin-bottom: 20px;
+}
+.sub-container>label{
+    margin-right: 5px;
+}
+.sub-container>input{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.sub-container>button{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    background-color: #c9431e;;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
