@@ -10,9 +10,7 @@ router.get('/user', function (req, res, next){
 
 // add a user to the db
 router.post('/user', function (req, res, next){
-    res.send({
-        status: 'POST'
-    });
+    res.send(req.body);
 });
 
 module.exports = router;
