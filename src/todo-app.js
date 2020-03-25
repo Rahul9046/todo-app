@@ -2,13 +2,14 @@ import React from 'react';
 import './todo-app.css';
 import Login from './login.js';
 import Register from './register.js';
+import { withRouter } from 'react-router-dom';
 
-const TodoApp = ()=>{
+const TodoApp = (props)=>{
     return (
         <div className="main-container">
-            <Login />
+            <Login  assignUser={props.assignUser} history={props.history}/>
             <Register />
         </div>
     );
 }
-export default TodoApp;
+export default withRouter(TodoApp);
