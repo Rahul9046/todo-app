@@ -1,14 +1,13 @@
 import React from 'react';
 import './login.css';
+import axios from 'axios';
 
 const Login = (props)=>{
     let handleClick = (e)=>{
         let username = document.getElementById('username').value,
         password = document.getElementById('password').value;
-        fetch('/api/user/?usr=' + username + '&pass=' + password).then(function(data){
-            return data.json();
-        }).then((json)=>{
-            props.assignUser(json);
+        axios.get('/api/user/', { params: { usr: username, pass: password}}).then(function(json){
+            props.assignUser(json.data);
             props.history.push('./user');
         });
     }
