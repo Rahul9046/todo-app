@@ -64,3 +64,13 @@
     padding-left: 5px;
     font-size: 12px;
  }
+ .todo-item{
+    margin-top: 5px;
+    margin-bottom: 5px;
+ }
+ .todo-item>svg{
+    cursor: pointer;
+ }
+ .todo-text{
+     margin-left: 10px;
+ }
