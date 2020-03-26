@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 // setup express app
 const app = express();
 
+mongoose.set('useFindAndModify', false);
 // connect to mongodb
 mongoose.connect('mongodb://localhost/todoapp');
 mongoose.Promise = global.Promise;

@@ -8,13 +8,14 @@ class User extends Component {
         let userData = props.user.data;
         this.state = {
             details: userData.details,
-            todos: userData.todos
+            todos: userData.todos,
+            _id: userData._id
         };
       }
     render(){
-        let {details, todos} = this.state,
+        let {details, todos, _id} = this.state,
         handleUpdate = ()=>{
-            axios.put('/api/user/', { todos: this.state.todos.slice().concat(this.refs.inputElem.value) }, { params: {usr: details.username}})
+            axios.put('/api/user/', { todos: this.state.todos.slice().concat(this.refs.inputElem.value) }, { params: {id: _id}})
             .then((response) => {
                 this.setState({ 
                     todos: response.data.todos
@@ -24,7 +25,7 @@ class User extends Component {
             let id = e.target.id  || e.target.parentNode.id,
                 todoItem = document.getElementById(id).nextElementSibling.innerHTML,
                 filterdTodos = this.state.todos.filter(todo => todo !== todoItem);
-            axios.put('/api/user/', { todos: filterdTodos }, { params: {usr: details.username}})
+            axios.put('/api/user/', { todos: filterdTodos }, { params: {id: _id}})
             .then((response) => {
                 this.setState({ 
                     todos: response.data.todos
