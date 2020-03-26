@@ -16,4 +16,13 @@ router.post('/user', function (req, res, next){
     }).catch(next);
 });
 
+// add new todo 
+router.put('/user', function (req, res, next){
+    User.findOneAndUpdate(({'details.username': req.query.usr}, req.body)).then(function (){
+        User.findOne({ 'details.username': req.query.usr}).then((user)=>{
+            res.send(user);
+        });
+    });
+});
+
 module.exports = router;
