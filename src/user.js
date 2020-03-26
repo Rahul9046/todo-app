@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './user.css'
-import axios from 'axios'
+import './user.css';
+import axios from 'axios';
+import { withRouter } from 'react-router-dom'
 
 class User extends Component {
     constructor (props){
@@ -31,6 +32,9 @@ class User extends Component {
                     todos: response.data.todos
             })});
         },
+        handleLogout =  ()=>{
+            this.props.history.push('/');
+        },
         todosList = todos.map((todo, index) => {
             return (
                 <div key={index}>
@@ -43,6 +47,7 @@ class User extends Component {
         });
         return(
             <div className="user-details-container">
+                <div className="log-out-button" onClick={handleLogout}>LOGOUT</div>
                 <div className="username-container">Hey {details.username}.</div>
                 <div className="subtitle-container">Here is a list of your todos</div>
                 <div className="user-todos">{todosList}</div>
@@ -52,4 +57,4 @@ class User extends Component {
         )
     }
 }
-export default User;
+export default withRouter(User);

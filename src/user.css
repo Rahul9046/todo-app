@@ -7,6 +7,28 @@
     position: relative;
     top: 200px;
 }
+.log-out-button{
+    width: 65px;
+    height: 24px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    background-color: #c9431e;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    float: right;
+}
+.log-out-button:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; 
+    height: 100%;
+ }
 .username-container{
     color: white;
     font-size: 25px;
