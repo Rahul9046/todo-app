@@ -6,14 +6,14 @@ const User = require('../models/user');
 router.get('/user', function (req, res, next){
     User.findOne({ 'details.username': req.query.usr, 'details.password': req.query.pass}).then((user)=>{
         res.send(user);
-    });
+    }).catch(next);
 });
 
 // add a user to the db
 router.post('/user', function (req, res, next){
     User.create(req.body).then(function (user){
         res.send(user);
-    }).catch(next);
+    });
 });
 
 // add new todo 
