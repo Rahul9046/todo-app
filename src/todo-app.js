@@ -8,7 +8,7 @@ const TodoApp = (props)=>{
     return (
         <div className="main-container">
             <Login  assignUser={props.assignUser} history={props.history}/>
-            <Register />
+            <Register history={props.history}/>
         </div>
     );
 }

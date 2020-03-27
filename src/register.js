@@ -1,12 +1,15 @@
 import React from 'react';
 import './register.css';
 
-const Register = ()=>{
+const Register = (props)=>{
+    let handleClick = function(){
+        props.history.push('./register');
+    }
     return (
         <div className="register-container">
-            <a href="/register">  
+            <div onClick={handleClick} className="register-button">  
                  REGISTER
-            </a>
+            </div>
         </div>
     )
 }

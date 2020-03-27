@@ -1,4 +1,4 @@
-.register-container{
+.register-button{
     position: relative;
     top: 30px;
     text-align: center;
@@ -14,14 +14,9 @@
     cursor: pointer;
     text-align: center;
 }
-.register-container:before {
+.register-button:before {
     content: ' ';
     display: inline-block;
     vertical-align: middle; 
     height: 100%;
  }
-.register-container>a{
-    text-decoration: none;
-    font-size: 15px;
-    color: white;
-}
