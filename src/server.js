@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 // setup express app
 const app = express();
 
+mongoose.set('useFindAndModify', false);
 // connect to mongodb
 mongoose.connect('mongodb://localhost/todoapp');
 mongoose.Promise = global.Promise;
@@ -21,6 +22,6 @@ app.use(function(err, req, res, next){
 });
 
 // listen for requests
-app.listen(process.env.port || 3000, function(){
+app.listen(process.env.port || 3003, function(){
     console.log('ready to accept requests');
 })

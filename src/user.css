@@ -1,0 +1,98 @@
+.user-details-container{
+    width: 500px;
+    height: 400px;
+    background-color: #c9431e;
+    border-radius:4px;
+    margin: auto;
+    position: relative;
+    top: 200px;
+}
+.log-out-button{
+    width: 65px;
+    height: 24px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    background-color: #c9431e;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    float: right;
+}
+.log-out-button:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; 
+    height: 100%;
+ }
+.username-container{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 19px;
+}
+.subtitle-container{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.user-todos{
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    padding-left: 10px;
+    border: 2px solid white;
+    border-radius: 3px;
+    height: 230px;
+    width: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+.add-item-buttom{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    background-color: #c9431e;;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 20px;
+    text-align: center;
+    display: inline-block;
+}
+.add-item-buttom:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; 
+    height: 100%;
+ }
+ #new-todo{
+    width: 300px;
+    height: 30px;
+    background-color: white;
+    border-radius: 2px;
+    border-width: 0px;
+    margin-left: 10px;
+    padding-left: 5px;
+    font-size: 12px;
+ }
+ .todo-item{
+    margin-top: 5px;
+    margin-bottom: 5px;
+ }
+ .todo-item>svg{
+    cursor: pointer;
+ }
+ .todo-text{
+     margin-left: 10px;
+ }

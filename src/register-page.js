@@ -1,22 +1,37 @@
 import React from 'react';
 import './register-page.css';
-const RegisterPage = ()=>{
+import axios from 'axios';
+import { withRouter } from 'react-router-dom';
+
+
+const RegisterPage = (props)=>{
+    let handleRegistration = ()=>{
+        let username = document.getElementById('username').value,
+            password = document.getElementById('password').value;
+        axios.post('/api/user', {
+            details: {
+                username,
+                password
+            }
+        });
+        props.history.push('/');
+    }
     return (
         <div className="register-page-container">
             <div className="sub-container">
-                <label id="username">Username</label>
-                <input type="text"/>
+                <label>Username</label>
+                <input id="username" type="text"/>
             </div>
             <div className="sub-container">
-                <label id="password">Password</label>
-                <input type="text"/>
+                <label>Password</label>
+                <input id="password" type="text"/>
             </div>
             <div className="sub-container">
-                <button id="sign-in">
+                <button onClick={handleRegistration} id="sign-in">
                     SIGN IN
                 </button>
             </div>
         </div>
     );
 }
-export default RegisterPage;
+export default withRouter(RegisterPage);
