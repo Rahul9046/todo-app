@@ -8,7 +8,7 @@ const RegisterPage = (props)=>{
     let handleRegistration = ()=>{
         let username = document.getElementById('username').value,
             password = document.getElementById('password').value;
-        axios.post('/api/user', {
+        axios.post('/.netlify/functions/api/user', {
             details: {
                 username,
                 password

@@ -6,7 +6,7 @@ const Login = (props)=>{
     let handleClick = (e)=>{
         let username = document.getElementById('username').value,
         password = document.getElementById('password').value;
-        axios.get('/api/user/', { params: { usr: username, pass: password}}).then(function(json){
+        axios.get('/.netlify/functions/api/user/', { params: { usr: username, pass: password}}).then(function(json){
             props.assignUser(json.data);
             props.history.push('./user');
         });

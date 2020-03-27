@@ -16,7 +16,7 @@ class User extends Component {
     render(){
         let {details, todos, _id} = this.state,
         handleUpdate = ()=>{
-            axios.put('/api/user/', { todos: this.state.todos.slice().concat(this.refs.inputElem.value) }, { params: {id: _id}})
+            axios.put('/.netlify/functions/api/user/', { todos: this.state.todos.slice().concat(this.refs.inputElem.value) }, { params: {id: _id}})
             .then((response) => {
                 this.setState({ 
                     todos: response.data.todos
@@ -26,7 +26,7 @@ class User extends Component {
             let id = e.target.id  || e.target.parentNode.id,
                 todoItem = document.getElementById(id).nextElementSibling.innerHTML,
                 filterdTodos = this.state.todos.filter(todo => todo !== todoItem);
-            axios.put('/api/user/', { todos: filterdTodos }, { params: {id: _id}})
+            axios.put('/.netlify/functions/api/user/', { todos: filterdTodos }, { params: {id: _id}})
             .then((response) => {
                 this.setState({ 
                     todos: response.data.todos
